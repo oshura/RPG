@@ -13,14 +13,14 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'ng test --progress=false --watch false'
+                bat 'npm run ng -- test --progress=false --watch false'
                 echo 'TODO: Publish with allure reporter.'
             }
         }
 
         stage('Build') {
             steps {
-                bat 'npm build --prod' 
+                bat 'npm run ng -- build --prod' 
                 archiveArtifacts artifacts: '**/dist/RPG/*', fingerprint: true 
             }
         }
