@@ -1,19 +1,32 @@
 pipeline {
-    agent any
+    triggers { 
+        pollSCM('H */4 * * 1-5') 
+    }
+    agent any    
     stages {
-        stage('Build') {
+        stage('NPM Install') {
             steps {
-                echo 'Building..'
+                withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
+                    bat 'npm install'
+                }
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                bat 'ng test --progress=false --watch false'
+                echo 'TODO: Publish with allure reporter.'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                bat 'npm build --prod' 
+                archiveArtifacts artifacts: '**/dist/RPG/*', fingerprint: true 
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'TODO: Deploy.'
             }
         }
     }
