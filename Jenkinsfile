@@ -30,7 +30,7 @@ pipeline {
             agent { label 'windows' }
             steps {
                 unstash 'RPG'
-                bat 'xcopy .\ C:\www\frontend_01\ /s /e'
+                bat 'xcopy . "C:\www\frontend_01" /s /e'
                 echo 'Deployed.'
             }
         }
