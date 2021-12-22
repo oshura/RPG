@@ -21,12 +21,17 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'npm run ng -- build --prod' 
-                archiveArtifacts artifacts: '**/dist/RPG/*', fingerprint: true 
+                //archiveArtifacts artifacts: '**/dist/RPG/*', fingerprint: true 
+                stash includes: '**/dist/RPG/*', name: 'RPG'
+                echo 'Built.'
             }
         }
         stage('Deploy') {
+            agent { label 'windows' }
             steps {
-                echo 'TODO: Deploy.'
+                unstash 'RPG'
+                bat 'xcopy .\ C:\www\frontend_01\ /s /e'
+                echo 'Deployed.'
             }
         }
     }
