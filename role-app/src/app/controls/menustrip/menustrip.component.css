@@ -1,0 +1,30 @@
+.icon {
+    padding: 5%;
+    display: inline-block;
+    border: solid 1px black;
+}
+
+.icon img{
+    width: 100%;
+    height: auto;
+}
+
+/*****************************************************************************/
+
+@media only screen and (min-width: 601px) {
+
+    .icon {
+        width: 100%;
+    }
+
+}
+
+/*****************************************************************************/
+
+@media only screen and (max-width: 600px) {
+
+    .icon {
+        width: 20%;
+    }
+
+}

@@ -1,0 +1,18 @@
+<div class="chat">
+    <h2>Free Chat</h2>
+    <div class="historic">
+        <ul [id]="chatComponentId" (scroll)="ScrollClick()" *ngIf="chatDM!.HistoryStreamWithNewLines$">
+            <li class="message" *ngFor="let Line of chatDM!.HistoryStreamWithNewLines$ | async">
+                <div class="datetime">({{Line.date | date:'short'}})</div>
+                <div class="who">{{Line.playerName}}</div>
+                <div *ngFor="let SubLine of GetLines(Line.text)" class="text">{{SubLine}}</div>
+            </li>
+        </ul>
+    </div>
+
+    <form class="form" #heroForm="ngForm">
+        <!--<input type="text" class="textctl" [ngStyle]="ActiveState()" required [(ngModel)]="model.text" name="text" placeholder="introduce el texto a enviar">-->
+        <textarea rows="3" class="textctl" [ngStyle]="ActiveState()" required [(ngModel)]="model.text" name="text" placeholder="introduce el texto a enviar"></textarea>
+        <input type="button" value="Send Text" class="buttonctl" [ngStyle]="ActiveState()" name="newtextsubmit" (click)="SendLine()">
+    </form>
+</div>

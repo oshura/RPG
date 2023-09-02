@@ -1,0 +1,35 @@
+.visible {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.hidden {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+/*****************************************************************************/
+
+@media only screen and (min-width: 601px) {
+
+    .controlsbar{        
+        width: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+/*****************************************************************************/
+
+@media only screen and (max-width: 600px) {
+
+    .controlsbar{
+        width: 100%;
+    }
+
+}

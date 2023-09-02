@@ -1,0 +1,33 @@
+.list {
+    display: inline-block;
+    background-color: lightgoldenrodyellow;
+    /*min-height: 250px;*/
+    position: relative;
+    height: 90%;
+    width: 30%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: break-word;
+
+    padding: 2% 1% 2% 1%;
+    margin: 0;
+    list-style-type: none; 
+}
+
+.list li {
+    display: block;
+    width: 100%;
+    background-color: goldenrod;
+    margin: 3% 0 3% 0;
+    border: 1px solid slategray;
+    padding: 1%;
+}
+
+.viewer {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    width: 70%;
+    vertical-align: top;
+    padding: 1%;
+}

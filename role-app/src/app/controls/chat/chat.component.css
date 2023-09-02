@@ -1,0 +1,87 @@
+.chat {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.chat h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: goldenrod;
+    margin: 0;
+    border: 1px solid slategray;
+}
+
+.historic {    
+    position: relative;
+    height: 70%;
+    overflow: hidden;
+    
+    padding: 0;
+    margin: 0;
+}
+
+.historic ul {    
+    /*height: 300px;*/
+    background-color: lightgoldenrodyellow;
+    /*min-height: 250px;*/
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: break-word;
+
+    padding: 5%;
+    margin: 0;
+    list-style-type: none; 
+}
+
+.message {
+    margin: 1% 0 4% 2%;
+}
+
+.datetime {
+    display: inline-block;
+    color: lightgray;
+    width: 40%;
+}
+
+.who {
+    display: inline-block;
+    color: rgb(92, 92, 92);
+    width: 60%;
+}
+
+.text {
+    padding: 0 0 0 2%;
+    display: inline-block;
+    color: slategray;
+    width: 100%;    
+    text-indent: 5%;
+}
+
+
+.form {
+    width: 100%;
+    background-color: goldenrod;
+}
+
+.textctl {
+    margin: 2%;
+    padding: 2%;
+    width: 96%;
+    resize: none;
+    overflow: auto;
+}
+
+.buttonctl {
+    width: 60%;
+    margin: 0 20% 2% 20%;
+}
+
+@media only screen and (max-height: 550px) {
+    .historic {    
+        height: 50%;
+    }
+}

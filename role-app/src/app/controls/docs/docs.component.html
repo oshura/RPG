@@ -1,0 +1,7 @@
+<h2>DOCUMENTS</h2>
+<ul class="list" *ngIf="DocumentList">
+   <li *ngFor="let doc of DocumentList" (click)="SelectDocument(doc)">
+        <a>{{doc.name}}</a>
+   </li> 
+</ul>
+<img class="viewer" *ngIf="selectedDocument" [src]="'assets/img/documents/' + selectedDocument.imagePath">

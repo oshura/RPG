@@ -1,0 +1,5 @@
+<form class="form" #heroForm="ngForm">
+    <input type="text" name="gamecode" [(ngModel)]="model.partida" placeholder="GameCode">
+    <input type="text" name="user" [(ngModel)]="model.user" placeholder="User">
+    <input type="button" value="Login" (click)="DoLogin()">
+</form>

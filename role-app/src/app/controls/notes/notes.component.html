@@ -1,0 +1,4 @@
+<h2>NOTES</h2>
+<form class="notebook" #heroForm="ngForm">
+    <textarea *ngIf="ServerNotes" rows="3" class="notebook" [(ngModel)]="model.text" name="text" placeholder="Notas del investigador"></textarea>
+</form>

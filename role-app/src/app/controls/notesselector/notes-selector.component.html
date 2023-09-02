@@ -1,0 +1,6 @@
+<div class="controlsbar">
+    <input (click)="Select('notes')" type="button" value="notes">
+    <input (click)="Select('docs')" type="button" value="docs">
+</div>
+<app-notes [class]="notesselected"></app-notes>
+<app-docs [class]="docsselected"></app-docs>

@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    /*display: block;*/
+}
+
+body {
+    
+    display: block;    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;    
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*****************************************************************************/
+
+.main {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+/*****************************************************************************/
+
+.menu {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.content {
+    display: inline-block;
+    overflow: hidden;
+}
+
+/*****************************************************************************/
+
+@media only screen and (min-width: 601px) {
+
+    .menu {
+        width: 8%;
+        position: fixed;
+        height: 100%;
+    }
+    
+    .content {
+        position: fixed;
+        height: 100%;
+        left: 8%;
+        width: 92%;
+    }  
+
+}
+
+/*****************************************************************************/
+
+@media only screen and (max-width: 600px) {
+
+    .menu {      
+        width: 100%;
+        position: fixed;
+        height: 14%;
+    }
+    
+    .content {
+        position: fixed;
+        height: 88%;
+        top: 14%;
+        width: 100%;
+    }
+
+}

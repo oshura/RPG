@@ -1,0 +1,6 @@
+<div class="controlsbar">
+    <input (click)="Select('chat')" type="button" value="chat">
+    <input (click)="Select('story')" type="button" value="story">
+</div>
+<app-chat [class]="chatselected"></app-chat>
+<app-story [class]="storyselected"></app-story>
