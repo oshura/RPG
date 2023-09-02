@@ -398,11 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Apium
-
-.dtbcache.v2
-.futdcache.v2
-.suo
-apium.metadata.v7.bin
-apium.projects.v7.bin
 Apium.csproj.user
-Apium.vs/
+/.vs
